@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Me</title>
+<link rel="icon" href="Capture.png">
+<style>
+html,body{margin:0;padding:0;min-height:100%;font-family:Segoe UI,sans-serif;color:#fff;
+background:
+radial-gradient(circle at 20% 30%,rgba(0,160,255,.08),transparent 40%),
+radial-gradient(circle at 80% 40%,rgba(0,255,200,.06),transparent 45%),
+linear-gradient(180deg,#01060d,#020b17)
+}
+
+.orb{position:absolute;width:18px;height:18px;border-radius:50%;
+background:radial-gradient(circle,#5effff,#00b3ff);
+box-shadow:0 0 10px rgba(0,200,255,.8),0 0 25px rgba(0,200,255,.6);
+animation:floatOrb 10s linear infinite}
+
+@keyframes floatOrb{
+0%{transform:translate(10vw,20vh)}
+25%{transform:translate(70vw,30vh)}
+50%{transform:translate(60vw,80vh)}
+75%{transform:translate(20vw,70vh)}
+100%{transform:translate(10vw,20vh)}
+}
+
+.one{position:fixed;top:20px;left:50%;transform:translateX(-50%);
+width:90%;max-width:900px;padding:10px 20px;
+display:flex;align-items:center;gap:15px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(6px);
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.5);
+transition:.3s;z-index:99}
+
+.one:hover{background:rgba(255,255,255,.1);transform:translateX(-50%) translateY(-3px)}
+
+.one img{width:50px;height:50px;border-radius:50%;cursor:pointer;transition:.3s}
+.one img:hover{transform:scale(1.1)}
+
+.user-info h3{margin:0;font-size:1.4rem}
+.user-info h5{margin:2px 0 0;font-size:.9rem;color:#ccc;font-weight:400}
+
+.content{padding:120px 20px 40px;max-width:900px;margin:auto}
+
+.bigbox{background:rgba(255,255,255,.05);padding:25px;border-radius:20px;
+margin-bottom:30px;backdrop-filter:blur(10px);
+box-shadow:0 10px 30px rgba(0,0,0,.4);transition:.3s}
+
+.bigbox:hover{background:rgba(255,255,255,.08);transform:translateY(-4px)}
+
+.bigbox h2{margin-top:0;color:#0ff}
+
+.list{display:flex;flex-wrap:wrap;gap:10px}
+
+.item{
+padding:10px 14px;border-radius:12px;
+background:rgba(0,0,0,.35);
+font-size:.9rem;cursor:pointer;
+transition:.2s
+}
+
+.item:hover{background:rgba(0,255,255,.15)}
+p{color:#ccc;line-height:1.5}
+</style>
+</head>
+
+<body>
+<div class="orb"></div>
+
+<div class="one">
+<img src="Capture.PNG" id="discord-img">
+<div class="user-info">
+<h3>Waves</h3>
+<h5>Game dev, hacker & Web Developer</h5>
+</div>
+</div>
+
+<div class="content">
+
+<div class="bigbox">
+<h2>Languages</h2>
+<div class="list">
+<div class="item" onclick="go('https://developer.mozilla.org/en-US/docs/Web/HTML')">HTML</div>
+<div class="item" onclick="go('https://developer.mozilla.org/en-US/docs/Web/CSS')">CSS</div>
+<div class="item" onclick="go('https://developer.mozilla.org/en-US/docs/Web/JavaScript')">JavaScript</div>
+<div class="item" onclick="go('https://www.python.org/about/')">Python</div>
+<div class="item" onclick="go('https://www.lua.org/about.html')">Lua</div>
+<div class="item" onclick="go('https://isocpp.org/')">C++</div>
+</div>
+</div>
+
+<div class="bigbox">
+<h2>Tools</h2>
+<div class="list">
+<div class="item" onclick="go('https://code.visualstudio.com/')">VS Code</div>
+<div class="item" onclick="go('https://visualstudio.microsoft.com/')">Visual Studio</div>
+<div class="item" onclick="go('https://create.roblox.com/docs')">Roblox Studio</div>
+</div>
+</div>
+
+<div class="bigbox">
+<h2>Specialized In</h2>
+<p>
+I focus on building clean web interfaces, scripting game logic, and creating smart Python tools.
+Most of my work is hands-on — breaking stuff, fixing it, and making it faster, smoother, or cooler.
+I like understanding how things work under the hood, not just using them.
+</p>
+</div>
+
+</div>
+
+<script>
+let d=document.getElementById("discord-img")
+d.onclick=()=>{
+navigator.clipboard.writeText("waves0629")
+alert("Discord username copied: waves0629")
+}
+
+function go(x){window.open(x,"_blank")}
+</script>
+
+</body>
+</html>
